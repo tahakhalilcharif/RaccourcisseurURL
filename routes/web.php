@@ -27,7 +27,7 @@ Route::middleware('auth')->group(function () {
 });
 
 Route::get('/{code}', [RedirectionController::class, 'redirect'])
-    ->where('code', '[A-Za-z0-9]{6}')
+    ->where('code', '[A-Za-z0-9]{8}')
     ->name('redirection');
 
 Route::get('/lien-expire', function () {
