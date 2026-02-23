@@ -38,7 +38,7 @@ class Lien extends Model
     public static function genererCodeCourt(): string
     {
         do {
-            $code = substr(str_shuffle('ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789'), 0, 6);
+            $code = substr(str_shuffle('ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789'), 0, 8);
         } while (self::where('code_court', $code)->exists()); // on verifie que le code genere n'existe pas deja dans la bdd
 
         return $code;

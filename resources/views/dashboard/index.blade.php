@@ -35,8 +35,10 @@
                             <a href="{{ route('dashboard.create') }}" class="text-indigo-600 hover:underline">Créez-en un !</a>
                         </p>
                     @else
-                        <div class="overflow-x-auto">
-                            <a href="{{ route('dashboard.create') }}" class="text-indigo-600 hover:underline">Ajouter un lien raccourci</a>
+                        <div class="overflow-x-auto">      
+                            <x-primary-button class="mb-4">
+                                <a href="{{ route('dashboard.create') }}" class="text-white">Ajouter un lien raccourci</a>
+                            </x-primary-button>
                             <table class="min-w-full divide-y divide-gray-200 text-sm" id="tableau-liens">
                                 <thead class="bg-gray-50">
                                     <tr>
